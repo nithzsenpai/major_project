@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VANET Normal / Sybil / Illusion detector
 
 This project is a complete, reproducible PyTorch pipeline for classifying vehicle-to-vehicle messages as **Normal**, **Sybil**, or **Illusion**. It downloads checksum-verified VeReMi NextGen data, preserves the official splits, creates leakage-resistant temporal and same-receiver relationship features, trains a two-branch TCN–BiGRU–attention network, calibrates its probabilities, evaluates every class, and exports deployable predictions.
@@ -157,3 +158,6 @@ runs/                    trained models and reports (not packaged)
 ## Reproducibility
 
 The default seed is 42 and deterministic PyTorch behavior is requested. GPU libraries can still introduce small platform-dependent differences. Keep the download manifest, preprocessing manifest, resolved training config, package versions, and final checkpoint with every reported experiment.
+=======
+# major_project
+>>>>>>> 9f0399bdf9241f1da520b18ec633f8bf69aae57d
