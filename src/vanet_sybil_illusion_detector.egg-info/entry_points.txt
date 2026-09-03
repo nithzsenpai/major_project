@@ -1,0 +1,6 @@
+[console_scripts]
+vanet-download = vanet_detector.download:main
+vanet-evaluate = vanet_detector.evaluate:main
+vanet-predict = vanet_detector.inference:main
+vanet-prepare = vanet_detector.preprocess:main
+vanet-train = vanet_detector.training:main

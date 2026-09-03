@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vanet-sybil-illusion-detector"
+version = "1.0.0"
+description = "Leakage-safe VeReMi NextGen Normal/Sybil/Illusion detector"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.4",
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "scikit-learn>=1.4",
+  "PyYAML>=6.0",
+  "requests>=2.31",
+  "tqdm>=4.66",
+  "matplotlib>=3.8",
+]
+
+[project.scripts]
+vanet-download = "vanet_detector.download:main"
+vanet-prepare = "vanet_detector.preprocess:main"
+vanet-train = "vanet_detector.training:main"
+vanet-evaluate = "vanet_detector.evaluate:main"
+vanet-predict = "vanet_detector.inference:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: vanet-sybil-illusion-detector
+Version: 1.0.0
+Summary: Leakage-safe VeReMi NextGen Normal/Sybil/Illusion detector
+Requires-Python: >=3.10
+Requires-Dist: torch>=2.4
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: requests>=2.31
+Requires-Dist: tqdm>=4.66
+Requires-Dist: matplotlib>=3.8

@@ -1,0 +1,36 @@
+seed: 42
+deterministic: true
+data_dir: data/smoke_processed
+run_dir: runs/cpu_smoke
+
+model:
+  tcn_channels: [16, 16]
+  kernel_size: 3
+  gru_hidden: 8
+  relation_hidden: 8
+  bidirectional: true
+  attention_heads: 4
+  fusion_hidden: 24
+  dropout: 0.10
+
+training:
+  batch_size: 16
+  epochs: 2
+  learning_rate: 0.001
+  minimum_lr: 0.000001
+  weight_decay: 0.0001
+  focal_gamma: 1.0
+  label_smoothing: 0.0
+  class_weighting: true
+  balanced_sampling: false
+  auxiliary_weight: 0.10
+  max_gradient_norm: 1.0
+  early_stopping_patience: 2
+  lr_patience: 1
+  lr_factor: 0.5
+  num_workers: 0
+  amp: false
+
+threshold:
+  maximum_false_positive_rate: 0.20
+

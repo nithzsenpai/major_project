@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "seq_len": 8,
+  "stride": 4,
+  "max_gap_seconds": 3.0,
+  "relation_bucket_seconds": 1.0,
+  "behavior_features": [
+    "speed",
+    "acceleration",
+    "heading_sin",
+    "heading_cos",
+    "delta_t",
+    "receive_latency",
+    "delta_x",
+    "delta_y",
+    "displacement",
+    "implied_speed",
+    "position_speed_error",
+    "delta_speed",
+    "expected_delta_speed",
+    "speed_acceleration_error",
+    "delta_acceleration",
+    "jerk",
+    "movement_heading_sin",
+    "movement_heading_cos",
+    "heading_motion_error",
+    "yaw_rate",
+    "receiver_distance",
+    "relative_bearing_sin",
+    "relative_bearing_cos",
+    "message_rate",
+    "history_valid",
+    "sender_observation_log"
+  ],
+  "relation_features": [
+    "relation_history_valid",
+    "active_sender_count",
+    "near_ids_1m",
+    "near_ids_3m",
+    "near_ids_10m",
+    "min_neighbor_distance",
+    "max_position_similarity",
+    "max_kinematic_similarity",
+    "max_motion_similarity",
+    "same_motion_count",
+    "near_distinct_alias_count",
+    "rssi_available",
+    "rssi_dbm",
+    "rssi_delta",
+    "rssi_rolling_mean",
+    "rssi_rolling_std",
+    "max_nearby_rssi_similarity"
+  ],
+  "classes": [
+    "normal",
+    "sybil",
+    "illusion"
+  ],
+  "normal_target_policy": "baseline_only",
+  "rssi_source": null,
+  "rssi_measurements": 0,
+  "archives": [
+    "InTAS_highway_2.zip",
+    "InTAS_highway_2_constantPositionOffset.zip",
+    "InTAS_highway_2_positionMirroring.zip",
+    "InTAS_highway_2_randomPositionOffset.zip",
+    "InTAS_highway_2_trafficCongestionSybil.zip"
+  ],
+  "splits": {
+    "train": {
+      "sequences": 1501,
+      "class_counts": {
+        "normal": 343,
+        "sybil": 969,
+        "illusion": 189
+      },
+      "shards": 1
+    },
+    "validation": {
+      "sequences": 4740,
+      "class_counts": {
+        "normal": 791,
+        "sybil": 3544,
+        "illusion": 405
+      },
+      "shards": 1
+    },
+    "test": {
+      "sequences": 3617,
+      "class_counts": {
+        "normal": 509,
+        "sybil": 2661,
+        "illusion": 447
+      },
+      "shards": 1
+    }
+  },
+  "processed_receiver_files": {
+    "test|highway_2|illusion": 60,
+    "test|highway_2|normal": 20,
+    "test|highway_2|sybil": 20,
+    "train|highway_2|illusion": 60,
+    "train|highway_2|normal": 20,
+    "train|highway_2|sybil": 20,
+    "validation|highway_2|illusion": 60,
+    "validation|highway_2|normal": 20,
+    "validation|highway_2|sybil": 20
+  }
+}

@@ -1,0 +1,36 @@
+seed: 42
+deterministic: true
+data_dir: data/processed
+run_dir: runs/quick
+
+model:
+  tcn_channels: [48, 64]
+  kernel_size: 3
+  gru_hidden: 48
+  relation_hidden: 24
+  bidirectional: true
+  attention_heads: 4
+  fusion_hidden: 96
+  dropout: 0.25
+
+training:
+  batch_size: 128
+  epochs: 30
+  learning_rate: 0.001
+  minimum_lr: 0.000001
+  weight_decay: 0.0001
+  focal_gamma: 1.5
+  label_smoothing: 0.02
+  class_weighting: true
+  balanced_sampling: false
+  auxiliary_weight: 0.20
+  max_gradient_norm: 1.0
+  early_stopping_patience: 7
+  lr_patience: 2
+  lr_factor: 0.5
+  num_workers: 0
+  amp: true
+
+threshold:
+  maximum_false_positive_rate: 0.05
+
